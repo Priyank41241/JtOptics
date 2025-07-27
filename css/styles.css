@@ -3405,7 +3405,7 @@ input::-moz-focus-inner {
     padding-left: 0rem;
 }
 
-.s-header__nav {
+.s-header__nav, .machineDropdown {
     list-style: none;
     font-family: var(--font-2);
     font-weight: 600;
@@ -3419,12 +3419,16 @@ input::-moz-focus-inner {
     letter-spacing: .3em;
 }
 
-.s-header__nav a {
+.machineDropdown .dropdown-menu li{
+    letter-spacing: 0.2em;
+}
+
+.s-header__nav a, .machineDropdown a {
     color: var(--color-gray-10);
 }
 
 .s-header__nav a:hover,
-.s-header__nav a:focus {
+.s-header__nav a:focus, .s-header__nav select:hover {
     color: black !important;
 }
 
@@ -4558,18 +4562,18 @@ html.no-csstransitions .s-hero__content {
  *
  * ------------------------------------------------------------------- */
 
-.s-printing {
+.s-printing, .s-welding, .s-cleaning {
     background-color: var(--color-bg);
     padding-top: calc(6 * var(--space));
     padding-bottom: var(--vspace-2);
 }
 
-.s-printing .para-start {
+.s-printing .para-start, .s-welding .para-start, .s-cleaning .para-start{
     background-color: #F3E205;
     color: black;
 }
 
-.s-printing .lead {
+.s-printing .lead, .s-welding .lead, .s-cleaning .lead {
     margin-top: var(--vspace-0_25);
     text-align: justify;
 }
@@ -4580,13 +4584,13 @@ html.no-csstransitions .s-hero__content {
  * printing
  * ------------------------------------------------------------------- */
 @media screen and (max-width: 1200px) {
-    .s-printing {
+    .s-printing, .s-welding, .s-cleaning {
         padding-top: calc(5 * var(--space));
     }
 }
 
 @media screen and (max-width: 400px) {
-    .s-printing {
+    .s-printing, .s-welding, .s-cleaning {
         padding-top: var(--vspace-4);
     }
 
@@ -4617,6 +4621,7 @@ html.no-csstransitions .s-hero__content {
 }
 
 
+
 /* ===================================================================
  * # portfolio
  *
@@ -4644,6 +4649,8 @@ html.no-csstransitions .s-hero__content {
 .folio-item__caption {
     display: none;
 }
+
+
 
 /* thumbnail
  *---------------------------------------------- */
@@ -5395,4 +5402,23 @@ html.no-csstransitions .s-hero__content {
     .ss-copyright {
         font-size: 1.4rem;
     }
+}
+
+.MachineFeatures li{
+    padding-top: 1em;
+}
+
+@media all and (min-width: 768px) {
+  .dropdown>.dropdown-menu,
+  .dropdown.open>.dropdown-menu {
+     display: block !important;
+     opacity: 0;
+     visibility: hidden;
+     transition: all ease 0.2s;
+  }
+  .dropdown:hover>.dropdown-menu,
+  .dropdown.open:hover>.dropdown-menu { 
+     opacity: 1;
+     visibility: visible; 
+  }
 }

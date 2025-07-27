@@ -56,19 +56,26 @@
             </a>
         </div>
 
-        <div class="s-header__content">
+        <div class="s-header__content" style="display: flex;">
     
-            <nav class="s-header__nav-wrap">
+            <nav class="s-header__nav-wrap" style="display: flex;">
                 <ul class="s-header__nav">
 <!--                     <li><a class="smoothscroll" href="#hero"><span style="background-color: #FFFFFF">Home</span></a></li> -->
                     <li><a class="smoothscroll" href="#about"><span style="background-color: #FFFFFF">About</span></a></li>
                     <li><a class="smoothscroll" href="#services"><span style="background-color: #FFFFFF">Services</span></a></li>
                     <li><a class="smoothscroll" href="#printing"><span style="background-color: #FFFFFF">3D Printing</span></a></li>
-                    <li><a href="/files/Catalog.pdf" target="_blank"><span style="background-color: #FFFFFF">Catalog</span></a></li>
-                    
-                    <!--  <li><a class="smoothscroll" href="#portfolio" title="Works">Works</a></li> -->
                 </ul>
-            </nav> <!-- end s-header__nav-wrap -->
+                
+            </nav>
+            <ul class="machineDropdown" style="padding-left: 0; margin: 0 1rem; ">
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span style="background-color: #FFFFFF">Machines</span></a>
+                            <ul class="dropdown-menu" style="list-style: none; background-color: #FCE205; margin: 0;">
+                                <li><a class="smoothscroll" href="#welding"><span>Fiber Laser Welding Machine</span></a></li>
+                                <li><a class="smoothscroll" href="#cleaning"><span>Handheld Laser Cleaning Machine</span></a></li>
+                            </ul>
+                    </li>
+            </ul> <!-- end s-header__nav-wrap -->
 
             <a href="mailto:jtoptics.india@gmail.com" class="btn btn--primary btn--small">
                 Get In Touch
@@ -286,7 +293,9 @@
 
     </section> <!-- end s-services -->
 
-    <section id="printing" class="s-printing"> <!-- Start 3D printing -->
+
+    <!-- Start 3D printing -->
+    <section id="printing" class="s-printing"> 
 
         <div class="row">
             <div class="column large-12">
@@ -333,8 +342,176 @@
         </div>
 
     </section> 
-   
 
+    <!-- end 3D printing -->
+
+    <!-- Start welding -->
+
+    <section id="welding" class="s-welding"> 
+
+        <div class="row">
+            <div class="column large-12">
+                <div class="section-title" data-num="04" data-aos="fade-up">
+                    <h3 class="h6">Fiber Laser Welding Machine</h3>
+                </div>
+            </div>
+            <div class="column large-6 w-900-stack">
+                <h1 class="display-1" data-aos="fade-up">
+                   <img src="images/WeldingSample.png" />
+                </h1>
+                <br/>
+                <br/>
+                <h4><span class="para-start" >Machine Features</span></h4>
+                <ul class="MachineFeatures">
+                    <li>3 in 1 Function (Welding, Cleaning & Cutting)</li>
+                    <li>Wire feeder</li>
+                    <li>Wobbling head</li>
+                    <li>Fiber laser source</li>
+                    <li>Auto pulse adjustments</li>
+                    <li>Pulse & CW options</li>
+                </ul>
+            </div>
+            <div class="column large-6 w-900-stack">
+                <h4 style="margin:0;"><span class="para-start" >Specifications</span></h4>
+                <table class="table table-bordered">
+                    <tr>
+                        <td>Power</td>
+                        <td>1kw/1.5kw/2kw</td>
+                    </tr>
+                    <tr>
+                        <td>Laser Type</td>
+                        <td>Fiber Laser</td>
+                    </tr>
+                    <tr>
+                        <td>Max Output Energy</td>
+                        <td>1kw/1.5kw/2kw</td>
+                    </tr>
+                    <tr>
+                        <td>Max Output Energy</td>
+                        <td>1080nm</td>
+                    </tr>
+                    <tr>
+                        <td>Modulation Frequency</td>
+                        <td>1-20 kHz</td>
+                    </tr>
+                    <tr>
+                        <td>Red Light Indicates Output Power</td>
+                        <td>0.5-1</td>
+                    </tr>
+                    <tr>
+                        <td>Fiber Cable Length</td>
+                        <td>10m</td>
+                    </tr>
+                    <tr>
+                        <td>Fiber Core Diameter</td>
+                        <td>50m</td>
+                    </tr>
+                    <tr>
+                       <td rowspan="3">Total Power Consumption</td>
+                       <td>7.5kw (1kw laser source)</td> 
+                    </tr>
+                    <tr>
+                        <td style="display: none;"></td>
+                        <td>8.5kw (1.5kw laser source)</td>
+                    </tr>
+                    <tr>
+                        <td style="display: none;"></td>
+                        <td>10kw (2kw laser source)</td>
+                    </tr>
+                    <tr>
+                        <td rowspan="2">Rated Power</td>
+                        <td>220 V AC 50Hz(1kw/1.5kw)</td>
+                    </tr>
+                    <tr>
+                        <td style="display: none;"></td>
+                        <td>380 V AC 50Hz(2kw)</td>
+                    </tr>
+                    <tr>
+                        <td>Cooling Method</td>
+                        <td>Water Cooling</td>
+                    </tr>
+                    <tr>
+                        <td>Gross Weight</td>
+                        <td>270 Kg</td>
+                    </tr>
+                    <tr>
+                        <td>Machine Dimension (L*W*H)</td>
+                        <td>625*1090*1749 mm</td>
+                    </tr>
+                </table>               
+            </div>    
+        </div>
+    </section> 
+
+    <!-- end welding -->
+
+    <!-- Start cleaning -->
+
+    <section id="cleaning" class="s-cleaning"> 
+
+        <div class="row">
+            <div class="column large-12">
+                <div class="section-title" data-num="05" data-aos="fade-up">
+                    <h3 class="h6">Handheld Laser Cleaning Machine</h3>
+                </div>
+            </div>
+            <div class="column large-6 w-900-stack">
+                <h1 class="display-1" data-aos="fade-up">
+                   <img src="images/CleaningSample.png" />
+                </h1>
+            </div>
+            <div class="column large-6 w-900-stack">
+                <h4 style="margin:0;"><span class="para-start" >Specifications</span></h4>
+                <table class="table table-bordered" style="margin-top: 1em;">
+                    <thead>
+                        <tr style="background-color: #F3E205;">
+                            <th>Model</th>
+                            <th>Msclean</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Working Area</td>
+                            <td>300 mm</td>
+                        </tr>
+                        <tr>
+                            <td>Power Range</td>
+                            <td>1500w-2000w</td>
+                        </tr>
+                        <tr>
+                            <td>Cooling Method</td>
+                            <td>Water-cooled</td>
+                        </tr>
+                        <tr>
+                            <td>Working Mode</td>
+                            <td>Continuous/modulated</td>
+                        </tr>
+                        <tr>
+                            <td>Functional Uses</td>
+                            <td>Cleaning</td>
+                        </tr>
+                        <tr>
+                            <td>Fiber Length</td>
+                            <td>Standard 10m fiber length</td>
+                        </tr>
+                    </tbody>   
+                </table>
+            </div>
+            <div class="column large-6 w-900-stack">
+                <h1 class="display-1" data-aos="fade-up">
+                   <img src="images/CleaningHand.png" style="max-width: 60% !important;" />
+                </h1>
+            </div>
+            <div class="column large-6 w-900-stack">
+                <h4 style="margin:0;"><span class="para-start" > Handheld Cleaning Head</span></h4>
+                <p class="lead" data-aos="fade-up">
+                    <span class="para-start" >It</span> has a lighweight and ergonomic design that can meet various cleaning needs. It features metal safety sensors and automatic light locking during movement, ensuring safe and easy operation. 
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- end cleaning -->
 
     <!-- clients
     ================================================== -->
