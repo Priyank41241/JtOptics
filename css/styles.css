@@ -3155,7 +3155,7 @@ input::-moz-focus-inner {
 .section-title h3 {
     z-index: 2;
     font-weight: 500;
-    color: var(--color-1);
+    color: black;
     padding-bottom: 2em;
     margin-top: 0;
     position: absolute;
@@ -3424,7 +3424,7 @@ input::-moz-focus-inner {
 }
 
 .s-header__nav a, .machineDropdown a {
-    color: var(--color-gray-10);
+    color: #001A53;
 }
 
 .s-header__nav a:hover,
