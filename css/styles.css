@@ -3419,6 +3419,13 @@ input::-moz-focus-inner {
     letter-spacing: .3em;
 }
 
+.dropdown-menu li {
+  display: block;
+}
+
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
 .machineDropdown .dropdown-menu li{
     letter-spacing: 0.2em;
 }
