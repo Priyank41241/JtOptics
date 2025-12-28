@@ -3423,11 +3423,18 @@ input::-moz-focus-inner {
   display: block;
 }
 
+
+
 .dropdown:hover .dropdown-menu {
   display: block;
 }
-.machineDropdown .dropdown-menu li{
-    letter-spacing: 0.2em;
+
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+.dropdown-menu li a:hover{
+    color: #ffffff !important;
 }
 
 .s-header__nav a, .machineDropdown a {
@@ -3439,9 +3446,13 @@ input::-moz-focus-inner {
     color: black !important;
 }
 
+.dropdown-menu li:hover{
+    color: #ffffff !important;
+}
+
 .s-header__nav li {
     display: inline-block;
-    padding-left: 10;
+    padding-left: 10px;
     margin: 0 1rem;
 }
 
@@ -3738,6 +3749,46 @@ input::-moz-focus-inner {
         -webkit-transition-delay: .6s;
         transition-delay: .6s;
     }
+
+    @media screen and (max-width: 900px) {
+    /* 1. Ensure the dropdown list doesn't float over other items on mobile */
+    .s-header__nav .dropdown-menu {
+        position: relative !important; /* Stack them vertically */
+        top: 0 !important;
+        left: 0 !important;
+        display: none; /* Hide by default, show when parent has 'is-open' */
+        background-color: #f9f9f9 !important; /* Light gray to distinguish from main links */
+        padding: 0 0 0 2rem !important; /* Indent the sub-items */
+        width: 100% !important;
+        visibility: visible !important;
+        opacity: 1 !important;
+        box-shadow: none !important;
+    }
+
+    /* 2. Style the dropdown links for mobile readability */
+    .s-header__nav .dropdown-menu li {
+        line-height: 4rem !important;
+        border: none !important;
+    }
+
+    .s-header__nav .dropdown-menu li a {
+        font-size: 1.2rem !important;
+        color: #555555 !important;
+        text-transform: none !important; /* Easier to read on mobile */
+    }
+
+    /* 3. Show dropdown when the parent <li> is clicked/toggled */
+    .s-header__nav li.dropdown.is-open .dropdown-menu {
+        display: block !important;
+    }
+    
+    /* 4. Optional: If you prefer them always expanded on mobile */
+    /*
+    .s-header__nav .dropdown-menu {
+        display: block !important;
+    }
+    */
+}
 }
 
 @media screen and (max-width: 600px) {
@@ -5418,7 +5469,7 @@ html.no-csstransitions .s-hero__content {
 @media all and (min-width: 768px) {
   .dropdown>.dropdown-menu,
   .dropdown.open>.dropdown-menu {
-     display: block !important;
+     /* display: block !important; */
      opacity: 0;
      visibility: hidden;
      transition: all ease 0.2s;
@@ -5429,3 +5480,41 @@ html.no-csstransitions .s-hero__content {
      visibility: visible; 
   }
 }
+
+
+
+/* Fix for the Hero background highlight */
+.highlight {
+    background-color: #FCE205;
+    padding: 0 0.5rem;
+}
+
+/* Ensure images don't overflow on small phones */
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Make tables scrollable on mobile so they don't break the page width */
+table {
+    display: block;
+    width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+/* Fix for the dropdown menus on mobile to ensure they stack instead of float */
+/* @media screen and (max-width: 900px) {
+    .dropdown-menu {
+        position: relative !important;
+        background-color: transparent !important;
+        padding-left: 2rem !important;
+        display: block !important; 
+        opacity: 1 !important;
+        visibility: visible !important;
+    }
+    
+    .s-header__nav li {
+        border-bottom: 1px solid rgba(0,0,0,0.05);
+    }
+} */

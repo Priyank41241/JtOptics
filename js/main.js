@@ -112,8 +112,10 @@
 
             // at 900px and below
             if (window.matchMedia('(max-width: 900px)').matches) {
-                $toggleButton.toggleClass('is-clicked');
-                $siteBody.toggleClass('menu-is-open');
+                if(!$(this).hasClass('dropdown-toggle')){
+                    $toggleButton.toggleClass('is-clicked');
+                    $siteBody.toggleClass('menu-is-open');
+                }
             }
         });
 
@@ -333,3 +335,18 @@
     })();
 
 })(jQuery);
+
+$('.dropdown-toggle').on('click', function(e) {
+    // Only apply this logic on mobile screens
+    if (window.innerWidth < 900) {
+        e.preventDefault(); // Prevent the "#" link from jumping the page
+        var $parent = $(this).parent('.dropdown');
+        
+        // Close other open dropdowns
+        $('.dropdown').not($parent).removeClass('is-open');
+        
+        console.log($('.dropdown').not($parent))
+        // Toggle the current one
+        $parent.toggleClass('is-open');
+    }
+});
